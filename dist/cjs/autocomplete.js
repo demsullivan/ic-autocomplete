@@ -304,6 +304,11 @@ exports["default"] = Ember.Component.extend({
     if (!this.get('isOpen') || !this.get('options.length')) {
       return;
     }
+
+    if (!this.get('autocomplete')) {
+        return;
+    }
+
     if (this.get('isBackspacing')) {
       this.set('isBackspacing', false);
       return;
